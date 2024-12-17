@@ -1,0 +1,149 @@
+.homesection{
+  background-color: hsl(46, 54%, 86%);
+}
+.home-section {
+  height: calc(100vh - 5.2rem);
+  z-index: -5;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 10%,
+    100% 90%,
+    50% 100%,
+    0% 90%,
+    0% 10%
+  );
+  clip-path: polygon(49% 0, 100% 3%, 100% 94%, 50% 100%, 0 94%, 0 4%);
+}
+.home-center {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  align-items: center;
+  height: 100%;
+}
+.home-text {
+  text-align: center;
+  text-transform: uppercase;
+  transition: $transition;
+  letter-spacing: 0.34rem;
+  font-family: $heading-fontFamily;
+  column-gap: 2rem;
+ 
+}
+.home-title1 {
+  color: $white;
+  animation: slide-left 0.65s linear 1;
+  font-size: 5rem;
+}
+.home-title2 {
+  font-weight: bolder;
+  color: $clr-red;
+  font-size: 4.7rem;
+  animation: slide-right 0.65s linear 1;
+}
+.home-btn {
+  padding: .85rem;
+  outline: 0.038rem solid $navBackground-color;
+  outline-offset: 0.25rem;
+  color:$clr-grey-1;
+  
+  border-radius: $border-radius;
+  animation: btn-show 1s linear 1;
+  background-color: transparent;
+  &:hover {
+    background-color: $navBackground-color;
+    color:$white;
+  }
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.overlays {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.664));
+  z-index: -1;
+}
+
+/* animation */
+
+@keyframes slide-right {
+  0% {
+    transform: translateY(-200%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateY(200%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes btn-show {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.28);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@include media(md) {
+  .home-section {
+    height: 65vh;
+  }
+  .home-title2 {
+    font-size: 3rem;
+  }
+  .home-title1 {
+    font-size: 2.65rem;
+  }
+  .home-btn {
+    margin-top: 2%;
+    padding: 0.35rem;
+  }
+  .home-btn {
+    font-size:1rem;
+    padding: 0.35rem;
+  }
+}
+@include media(sm) {
+  .home-section {
+    height: 55vh;
+  }
+  .home-title2 {
+    font-size: 2rem;
+  }
+  .home-title1 {
+    font-size: 1.85rem;
+  }
+  .home-btn {
+    font-size:0.75rem;
+    padding: 0.35rem;
+  }
+}

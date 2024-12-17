@@ -1,0 +1,14 @@
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/mixins';
+@import 'base/global';
+
+@import 'components/header';
+@import 'components/sidebar';
+@import 'components/home';
+@import './components/form';
+@import 'components/welcome';
+@import 'components/packages';
+@import 'components/contact';
+@import 'components/gallery';
+@import './components/footer';

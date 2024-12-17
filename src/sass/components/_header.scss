@@ -1,0 +1,84 @@
+
+  .nav-fixed {
+    height:5rem;
+    background-color: $background-color;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    .nav-center {
+      max-width: 1400px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      .logo {
+        display: grid;
+        align-items: center;
+        .logo-text {
+          font-family: "Grand Hotel", cursive;
+          color: $light-grey-3;
+          font-size: 1.2rem;
+        }
+        .logo-text1 {
+          margin: -1rem 0 0 1rem;
+          color: $light-black;
+          margin-top: -1.5rem;
+          font-weight: 600;
+          font-size: 1.6rem;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+
+
+    }
+  }
+  .navbar-fixed {
+   box-shadow: $logo-boxShadow;
+      position:fixed;
+      z-index: 10;
+  }
+
+  .nav-link {
+    color: $black;
+    letter-spacing: $spacing;
+    font-weight: 700;
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    transition: $transition;
+    color:$clr-grey-1;
+  }
+  .nav-btn {
+    display: none; // hide on large screen
+    color: #ff0505;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 3.1rem;
+    font-weight: bolder;
+    cursor: pointer;
+    &:hover {
+      color: #c83838c4;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  .global-header{
+    padding-left: 1.3rem;
+    margin-right: -4rem;
+  }
+  .headerText{
+    font-size:1.4rem;
+    color: $light-grey-3;
+  }
+  .header-icon{
+    font-size: 1.3rem;
+  }
+  @include media(md) {
+    .links,
+    .global-icons {
+      display: none; // Hide links and icons on tablets/mobiles
+    }
+    .nav-btn {
+      display: block; // Show hamburger button
+    }
+  }
+
